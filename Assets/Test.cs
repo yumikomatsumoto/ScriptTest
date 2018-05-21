@@ -9,7 +9,7 @@ public class Boss {
     public void Magic() {
         mp = mp - 5;
         
-        if (mp > 0){
+        if (mp >= 0){
             Debug.Log("魔法攻撃をした。残りMPは" + mp);
 
         }else{
