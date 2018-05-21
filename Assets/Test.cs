@@ -9,7 +9,7 @@ public class Boss {
     public void Magic() {
         mp = mp - 5;
         
-        if (mp >= 5){
+        if (mp > 0){
             Debug.Log("魔法攻撃をした。残りMPは" + mp);
 
         }else{
@@ -41,7 +41,7 @@ public class Test : MonoBehaviour {
         //Bossクラスの変数を宣言してインスタンスを代入
         Boss lastboss = new Boss();
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 11; i++) {
             //魔法攻撃用の関数を呼び出す
             lastboss.Magic();
         }
