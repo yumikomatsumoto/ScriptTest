@@ -6,10 +6,10 @@ public class Boss {
     private int mp = 53;
     
     //魔法攻撃用の関数
-    public void Magic() {
-        mp = mp - 5;
-        
-        if (mp >= 0){
+    public void Magic(int cost) {
+              
+        if (mp >= cost){
+            mp -= cost;
             Debug.Log("魔法攻撃をした。残りMPは" + mp);
 
         }else{
@@ -43,7 +43,7 @@ public class Test : MonoBehaviour {
 
         for (int i = 0; i < 11; i++) {
             //魔法攻撃用の関数を呼び出す
-            lastboss.Magic();
+            lastboss.Magic(5);
         }
     }
 }
